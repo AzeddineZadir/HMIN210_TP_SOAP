@@ -1,0 +1,13 @@
+C:\Users\SILVER_PRO\source\repos\AgencyClient\bin\Debug\AgencyClient.exe.config
+C:\Users\SILVER_PRO\source\repos\AgencyClient\bin\Debug\AgencyClient.exe
+C:\Users\SILVER_PRO\source\repos\AgencyClient\bin\Debug\AgencyClient.pdb
+C:\Users\SILVER_PRO\source\repos\AgencyClient\obj\Debug\AgencyClient.csprojAssemblyReference.cache
+C:\Users\SILVER_PRO\source\repos\AgencyClient\obj\Debug\AgencyClient.Form1.resources
+C:\Users\SILVER_PRO\source\repos\AgencyClient\obj\Debug\AgencyClient.Properties.Resources.resources
+C:\Users\SILVER_PRO\source\repos\AgencyClient\obj\Debug\AgencyClient.csproj.GenerateResource.cache
+C:\Users\SILVER_PRO\source\repos\AgencyClient\obj\Debug\AgencyClient.csproj.CoreCompileInputs.cache
+C:\Users\SILVER_PRO\source\repos\AgencyClient\obj\Debug\AgencyClient.exe
+C:\Users\SILVER_PRO\source\repos\AgencyClient\obj\Debug\AgencyClient.pdb
+C:\Users\SILVER_PRO\source\repos\AgencyClient\obj\Debug\AgencyClient.OffresListe.resources
+C:\Users\SILVER_PRO\source\repos\AgencyClient\obj\Debug\AgencyClient.RoomDetailsForm.resources
+C:\Users\SILVER_PRO\source\repos\AgencyClient\obj\Debug\AgencyClient.ImageForme.resources
