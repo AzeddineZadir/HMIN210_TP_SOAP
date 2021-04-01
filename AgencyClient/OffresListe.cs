@@ -16,7 +16,7 @@ namespace AgencyClient
         private string dateDepart;
         private int nbLits;
         private int id_roome;
-        public OffresListe(ServiceReservationHotel.Rome [] listOffres, string dA, string dD, int nbL)
+        public OffresListe(ServiceReservationHotel.Rome [] listOffres,ServiceReservationHotel2.Rome [] listOffres2 , string dA, string dD, int nbL)
         {
             InitializeComponent();
             ServiceReservationHotel.ReservatioHotelService1 service = new ServiceReservationHotel.ReservatioHotelService1();
@@ -59,8 +59,22 @@ namespace AgencyClient
                 var listViewItem = new ListViewItem(row);*/
                /* lv_offres.Items.Add(listViewItem);*/
             }
-           
-            
+
+            foreach (var item in listOffres2)
+            {
+
+
+                string imageStr = service.SendImage(item.Id);
+
+                Image item_image = getImageFromString(imageStr);
+                dgv_offeres.Rows.Add(item.Id.ToString(), item.Type, item.Nb_bads.ToString(), item.Price.ToString(), item_image);
+                /*string[] row = { item.Id.ToString(),item.Type , item.Nb_bads.ToString(), item.Price.ToString() };
+                var listViewItem = new ListViewItem(row);*/
+                /* lv_offres.Items.Add(listViewItem);*/
+            }
+
+
+
 
             this.dateArrivee = dA;
             this.dateDepart = dD;

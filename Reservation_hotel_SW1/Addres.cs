@@ -15,6 +15,13 @@ namespace Reservation_hotel_SW1
         public string Locality { get; set; }
         public string Gps { get; set; }
 
+
+        public Addres()
+        {
+           
+        }
+
+
         public Addres(int id, string contry, string city, string street, string number, string locality, string gps)
         {
             Id = id;

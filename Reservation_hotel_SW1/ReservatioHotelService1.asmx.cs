@@ -53,6 +53,10 @@ namespace Reservation_hotel_SW1
 
             Debug.WriteLine("nombre de chambre libre retourner  " +free_roomes.Count);
 
+            Debug.WriteLine("price befor promotion  " + free_roomes[0].Price);
+            setRoomPriceByAgency(agency, free_roomes);
+            Debug.WriteLine("price after promotion  " + free_roomes[0].Price);
+
             return (free_roomes);
 
         }
@@ -101,7 +105,16 @@ namespace Reservation_hotel_SW1
             return imageStr;
         }
 
-        
+
+        [WebMethod]
+        public Hotel GetHotel()
+        {
+            
+            return h1;
+        }
+
+
+
         public List<Rome> addImages(List<Rome> roomes)
         {
             List<Rome> roomesWimg = new List<Rome>();
@@ -134,5 +147,19 @@ namespace Reservation_hotel_SW1
 
             return price;
         }
+
+
+        public void setRoomPriceByAgency(Agence agence, List<Rome> roomes)
+        {
+
+            foreach(var roome in roomes)
+            {
+                roome.Price = getRommePriceByAgency(agence, roome);
+            }
+
+        }
+
     }
+
+    
 }

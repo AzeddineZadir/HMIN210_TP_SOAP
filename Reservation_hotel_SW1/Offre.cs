@@ -11,6 +11,10 @@ namespace Reservation_hotel_SW1
         public int Id { get; set; }
         public int Pourcentage { get; set; }
 
+        public Offre()
+        {
+        }
+
         public Offre(int id, int pourcentage)
         {
             Id = id;

@@ -5,5 +5,8 @@
     <Setting Name="AgencyClient_ServiceReservationHotel_ReservatioHotelService1" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://localhost:44304/ReservatioHotelService1.asmx</Value>
     </Setting>
+    <Setting Name="AgencyClient_ServiceReservationHotel2_ReservationHotelService2" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://localhost:44352/ReservationHotelService2.asmx</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

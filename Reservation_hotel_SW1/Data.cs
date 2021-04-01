@@ -23,7 +23,7 @@ namespace Reservation_hotel_SW1
         Offre o3 = new Offre(3, 30);
         //les agences 
 
-        static List<Agence> agences = new List<Agence>() { new Agence(1, "a1", "a1pwd", new Offre(1, 10)), new Agence(2, "agence1","mdp", new Offre(2, 20)), new Agence(3, "agence1","mdp", new Offre(3, 30)) };
+        static List<Agence> agences = new List<Agence>() { new Agence(1, "a1", "a1", new Offre(1, 10)), new Agence(2, "agence1","mdp", new Offre(2, 20)), new Agence(3, "agence1","mdp", new Offre(3, 30)) };
        
 
 

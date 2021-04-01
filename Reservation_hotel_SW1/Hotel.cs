@@ -16,11 +16,15 @@ namespace Reservation_hotel_SW1
         public Addres Addres { get; set; }
         
         public List<Agence> Agences { get; set; }
-        
-        
-        
-        
-        
+
+
+
+        public Hotel()
+        {
+
+
+        }
+
         public Hotel(int id, string name, int star, List<Rome> roomes, Addres addres , List<Agence> agences)
         {
             Id = id;

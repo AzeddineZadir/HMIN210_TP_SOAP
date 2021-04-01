@@ -35,6 +35,8 @@ namespace AgencyClient.ServiceReservationHotel {
         
         private System.Threading.SendOrPostCallback SendImageOperationCompleted;
         
+        private System.Threading.SendOrPostCallback GetHotelOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -81,6 +83,9 @@ namespace AgencyClient.ServiceReservationHotel {
         
         /// <remarks/>
         public event SendImageCompletedEventHandler SendImageCompleted;
+        
+        /// <remarks/>
+        public event GetHotelCompletedEventHandler GetHotelCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetDisponibilites", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -186,6 +191,33 @@ namespace AgencyClient.ServiceReservationHotel {
             if ((this.SendImageCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.SendImageCompleted(this, new SendImageCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetHotel", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Hotel GetHotel() {
+            object[] results = this.Invoke("GetHotel", new object[0]);
+            return ((Hotel)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetHotelAsync() {
+            this.GetHotelAsync(null);
+        }
+        
+        /// <remarks/>
+        public void GetHotelAsync(object userState) {
+            if ((this.GetHotelOperationCompleted == null)) {
+                this.GetHotelOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetHotelOperationCompleted);
+            }
+            this.InvokeAsync("GetHotel", new object[0], this.GetHotelOperationCompleted, userState);
+        }
+        
+        private void OnGetHotelOperationCompleted(object arg) {
+            if ((this.GetHotelCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetHotelCompleted(this, new GetHotelCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -521,6 +553,270 @@ namespace AgencyClient.ServiceReservationHotel {
     }
     
     /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class Offre {
+        
+        private int idField;
+        
+        private int pourcentageField;
+        
+        /// <remarks/>
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Pourcentage {
+            get {
+                return this.pourcentageField;
+            }
+            set {
+                this.pourcentageField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class Agence {
+        
+        private int idField;
+        
+        private string agenceNameField;
+        
+        private string agencPwdField;
+        
+        private Offre loffreField;
+        
+        /// <remarks/>
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string AgenceName {
+            get {
+                return this.agenceNameField;
+            }
+            set {
+                this.agenceNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string AgencPwd {
+            get {
+                return this.agencPwdField;
+            }
+            set {
+                this.agencPwdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Offre Loffre {
+            get {
+                return this.loffreField;
+            }
+            set {
+                this.loffreField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class Addres {
+        
+        private int idField;
+        
+        private string contryField;
+        
+        private string cityField;
+        
+        private string streetField;
+        
+        private string numberField;
+        
+        private string localityField;
+        
+        private string gpsField;
+        
+        /// <remarks/>
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Contry {
+            get {
+                return this.contryField;
+            }
+            set {
+                this.contryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string City {
+            get {
+                return this.cityField;
+            }
+            set {
+                this.cityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Street {
+            get {
+                return this.streetField;
+            }
+            set {
+                this.streetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Number {
+            get {
+                return this.numberField;
+            }
+            set {
+                this.numberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Locality {
+            get {
+                return this.localityField;
+            }
+            set {
+                this.localityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Gps {
+            get {
+                return this.gpsField;
+            }
+            set {
+                this.gpsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class Hotel {
+        
+        private int idField;
+        
+        private string nameField;
+        
+        private int starField;
+        
+        private Rome[] roomesField;
+        
+        private Addres addresField;
+        
+        private Agence[] agencesField;
+        
+        /// <remarks/>
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Star {
+            get {
+                return this.starField;
+            }
+            set {
+                this.starField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Rome[] Roomes {
+            get {
+                return this.roomesField;
+            }
+            set {
+                this.roomesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Addres Addres {
+            get {
+                return this.addresField;
+            }
+            set {
+                this.addresField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Agence[] Agences {
+            get {
+                return this.agencesField;
+            }
+            set {
+                this.agencesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void GetDisponibilitesCompletedEventHandler(object sender, GetDisponibilitesCompletedEventArgs e);
     
@@ -594,6 +890,32 @@ namespace AgencyClient.ServiceReservationHotel {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void GetHotelCompletedEventHandler(object sender, GetHotelCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetHotelCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetHotelCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Hotel Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Hotel)(this.results[0]));
             }
         }
     }

@@ -32,5 +32,15 @@ namespace AgencyClient.Properties {
                 return ((string)(this["AgencyClient_ServiceReservationHotel_ReservatioHotelService1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://localhost:44352/ReservationHotelService2.asmx")]
+        public string AgencyClient_ServiceReservationHotel2_ReservationHotelService2 {
+            get {
+                return ((string)(this["AgencyClient_ServiceReservationHotel2_ReservationHotelService2"]));
+            }
+        }
     }
 }
